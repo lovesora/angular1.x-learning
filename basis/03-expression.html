@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Angular1.x learning - 一个简单的控制器</title>
+    <script src="https://cdn.bootcss.com/angular.js/1.6.5/angular.js"></script>
+    <style type="text/css">
+        .grey {
+            background-color: #DDD;
+        }
+        .red {
+            background-color: rgba(229, 35, 37, .2);
+        }
+    </style>
+</head>
+<body>
+    <h1>表达式</h1>
+    <p class="red">与js表达式相似</p>
+    <p class="red">可以调用作用域内的数据（对象，数组，字符串，数字等）</p>
+    <p class="red">数据与view层双向绑定，自动渲染</p>
+    <div ng-app="" ng-init="obj={v:'我是一个对象的属性值'};arr=[1,2,3,4];">
+        <p>我的第一个表达式: {{ 5 + 5 }}</p>
+        <p>字符串：{{'1' + 1 + 1}}</p>
+        <p>字符串：{{'1' * 1}}</p>
+        <p>字符串：{{1 + 1 + '1'}}</p>
+        <p>对象：{{obj.v}}</p>
+        <p>数组：{{arr.slice(-2, 3)}}</p>
+    </div>
+</body>
+</html>
